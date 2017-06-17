@@ -5,7 +5,7 @@ import { Text, AppRegistry } from 'react-native';
 //Styles
 const Styles = {
   TitleApp: {
-    fontSize = 50
+    fontSize : 50
   }
 }; 
 
@@ -17,4 +17,4 @@ const App = () => {
 };
 
 //Render
-AppRegistry.registerCompnent('app_quotes_from_to_day', () => App);
+AppRegistry.registerComponent('app_quotes_from_to_day', () => App);
