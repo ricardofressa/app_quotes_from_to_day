@@ -7,7 +7,8 @@ const Styles = {
   TitleApp: {
     fontSize : 30,
     backgroundColor : '#08509B',
-    height : 80
+    marginTop : 25,
+    padding: 30
   }
 }; 
 
