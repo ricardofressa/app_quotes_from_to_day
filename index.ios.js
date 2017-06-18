@@ -1,6 +1,6 @@
 //Imports
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { Text, AppRegistry, View } from 'react-native';
 
 //Styles
 const Styles = {
@@ -16,14 +16,22 @@ const Styles = {
     // shadowColor : '#000',
     // shadowOffset : {width:0, height: 2},
     // shadowOpacity : 0.4 
+  },
+  styleView : {
+  	backgroundColor : 'skyblue',
+  	height : 300,
+  	justifyContent : 'center',
+  	alignItems : 'flex-end'
   }
 }; 
 
 //Components
 const App = () => {
-	const { styleText } = Styles;
+	const { styleText, styleView } = Styles;
   return (
-    <Text style={ styleText }>Frases do dia</Text>
+  	<View style={ styleView }>
+    	<Text style={ styleText }></Text>
+    </View>
   );
 };
 
