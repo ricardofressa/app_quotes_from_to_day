@@ -5,7 +5,9 @@ import { Text, AppRegistry } from 'react-native';
 //Styles
 const Styles = {
   TitleApp: {
-    fontSize : 50
+    fontSize : 30,
+    backgroundColor : '#08509B',
+    height : 80
   }
 }; 
 
