@@ -1,6 +1,6 @@
 //Imports
 import React from 'react';
-import { Text, AppRegistry, View, Button } from 'react-native';
+import { Text, AppRegistry, View, TouchableOpacity } from 'react-native';
 
 //Styles
 const Styles = {
@@ -31,6 +31,22 @@ const Styles = {
   	flex : 1,
   	backgroundColor : 'cornflowerblue',
   	paddingTop : 40
+  },
+  button : {
+  	backgroundColor : '#48BBEC',
+  	padding : 10,
+  	borderColor : '#1D8EB8',
+  	borderWidth : 1,
+  	borderRadius : 8,
+  	shadowColor : '#000',
+  	shadowOffset : { width:0, height: 2},
+  	shadowOpacity : 0.4
+  },
+  textButton : {
+  	color : '#FFF',
+  	fontSize : 16, 
+  	fontWeight : 'bold',
+  	alignSelf : 'center'
   }
 //   top : {
 //   	flex : 2, // 2:11
@@ -52,15 +68,12 @@ const pressButton = () => {
 
 //Components
 const App = () => {
-	const { main} = Styles;
+	const { main, button, textButton } = Styles;
   return (
   	<View style={ main }>
-    	<Button
-    		onPress={ pressButton }
-    		title="Clique aqui"
-    		color="#841584"
-    		accessibilityLabel="Clique para abrir as notícias!" />
-
+    	<TouchableOpacity style={ button }>
+    		<Text style={ textButton }>Clique aqui</Text>
+    	</TouchableOpacity>
     </View>
   );
 };
