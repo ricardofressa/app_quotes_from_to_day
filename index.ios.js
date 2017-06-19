@@ -17,20 +17,25 @@ const Styles = {
     // shadowOffset : {width:0, height: 2},
     // shadowOpacity : 0.4 
   },
+  styleText2 : {
+    fontSize : 40,
+    backgroundColor : '#2A48FA',
+  },
   styleView : {
   	backgroundColor : 'skyblue',
-  	height : 300,
-  	justifyContent : 'center',
+  	height : 600,
+  	justifyContent : 'space-around',
   	alignItems : 'flex-end'
   }
 }; 
 
 //Components
 const App = () => {
-	const { styleText, styleView } = Styles;
+	const { styleText, styleText2, styleView } = Styles;
   return (
   	<View style={ styleView }>
-    	<Text style={ styleText }></Text>
+    	<Text style={ styleText }> A </Text>
+    	<Text style={ styleText2 }> B </Text>
     </View>
   );
 };
