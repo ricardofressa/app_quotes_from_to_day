@@ -75,9 +75,6 @@ const App = () => {
 	const { main, imageStyle } = Styles;
   return (
   	<View style={ main }>
-    	// <TouchableOpacity style={ button }>
-    	// 	<Text style={ textButton }>Clique aqui</Text>
-    	// </TouchableOpacity>
     	<Image 
     		source={ require('./imgs/uvas.png') }
     		style= { imageStyle } >
