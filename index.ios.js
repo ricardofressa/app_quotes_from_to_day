@@ -1,6 +1,6 @@
 //Imports
 import React from 'react';
-import { Text, AppRegistry, View } from 'react-native';
+import { Text, AppRegistry, View, Button } from 'react-native';
 
 //Styles
 const Styles = {
@@ -29,30 +29,38 @@ const Styles = {
   // }
   main : {
   	flex : 1,
-  	backgroundColor : 'cornflowerblue'
-  },
-  top : {
-  	flex : 2, // 2:11
-  	backgroundColor : 'brown'
-  },
-  content : {
-  	flex : 8, // 8:11
-  	backgroundColor : 'yellowgreen'
-  },
-  footer : {
-  	flex : 1, // 1:11
-  	backgroundColor : 'orangered'
+  	backgroundColor : 'cornflowerblue',
+  	paddingTop : 40
   }
+//   top : {
+//   	flex : 2, // 2:11
+//   	backgroundColor : 'brown'
+//   },
+//   content : {
+//   	flex : 8, // 8:11
+//   	backgroundColor : 'yellowgreen'
+//   },
+//   footer : {
+//   	flex : 1, // 1:11
+//   	backgroundColor : 'orangered'
+//   }
 }; 
+
+const pressButton = () => {
+	alert('Botão Pressionado');
+};
 
 //Components
 const App = () => {
-	const { main, top, content, footer } = Styles;
+	const { main} = Styles;
   return (
   	<View style={ main }>
-    	<Text style={ top }> A </Text>
-    	<Text style={ content }> B </Text>
-    	<Text style={ footer }> C </Text>
+    	<Button
+    		onPress={ pressButton }
+    		title="Clique aqui"
+    		color="#841584"
+    		accessibilityLabel="Clique para abrir as notícias!" />
+
     </View>
   );
 };
