@@ -4,38 +4,55 @@ import { Text, AppRegistry, View } from 'react-native';
 
 //Styles
 const Styles = {
-  styleText : {
-    fontSize : 40,
-    backgroundColor : '#08509B',
-    // paddingTop : 15,
-    // color : '#FFF'
-    // textDecorationLine : 'underline line-through'
-    // fontStyle : 'italic',
-    // fontWeight : '900',
-    // textAlign : 'left',
-    // shadowColor : '#000',
-    // shadowOffset : {width:0, height: 2},
-    // shadowOpacity : 0.4 
+  // styleText : {
+  //   fontSize : 40,
+  //   backgroundColor : '#08509B',
+  //   paddingTop : 15,
+  //   color : '#FFF'
+  //   textDecorationLine : 'underline line-through'
+  //   fontStyle : 'italic',
+  //   fontWeight : '900',
+  //   textAlign : 'left',
+  //   shadowColor : '#000',
+  //   shadowOffset : {width:0, height: 2},
+  //   shadowOpacity : 0.4 
+  // },
+  // styleText2 : {
+  //   fontSize : 40,
+  //   backgroundColor : '#2A48FA',
+  // },
+  // styleView : {
+  // 	backgroundColor : 'skyblue',
+  // 	height : 600,
+  // 	justifyContent : 'space-around',
+  // 	alignItems : 'flex-end'
+  // }
+  main : {
+  	flex : 1,
+  	backgroundColor : 'cornflowerblue'
   },
-  styleText2 : {
-    fontSize : 40,
-    backgroundColor : '#2A48FA',
+  top : {
+  	flex : 2, // 2:11
+  	backgroundColor : 'brown'
   },
-  styleView : {
-  	backgroundColor : 'skyblue',
-  	height : 600,
-  	justifyContent : 'space-around',
-  	alignItems : 'flex-end'
+  content : {
+  	flex : 8, // 8:11
+  	backgroundColor : 'yellowgreen'
+  },
+  footer : {
+  	flex : 1, // 1:11
+  	backgroundColor : 'orangered'
   }
 }; 
 
 //Components
 const App = () => {
-	const { styleText, styleText2, styleView } = Styles;
+	const { main, top, content, footer } = Styles;
   return (
-  	<View style={ styleView }>
-    	<Text style={ styleText }> A </Text>
-    	<Text style={ styleText2 }> B </Text>
+  	<View style={ main }>
+    	<Text style={ top }> A </Text>
+    	<Text style={ content }> B </Text>
+    	<Text style={ footer }> C </Text>
     </View>
   );
 };
