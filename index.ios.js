@@ -1,68 +1,24 @@
 //Imports
 import React from 'react';
-import { Text, AppRegistry, View, Image } from 'react-native';
+import { Text, AppRegistry, View, Image, TouchableOpacity } from 'react-native';
 
 //Styles
 const Styles = {
-  // styleText : {
-  //   fontSize : 40,
-  //   backgroundColor : '#08509B',
-  //   paddingTop : 15,
-  //   color : '#FFF'
-  //   textDecorationLine : 'underline line-through'
-  //   fontStyle : 'italic',
-  //   fontWeight : '900',
-  //   textAlign : 'left',
-  //   shadowColor : '#000',
-  //   shadowOffset : {width:0, height: 2},
-  //   shadowOpacity : 0.4 
-  // },
-  // styleText2 : {
-  //   fontSize : 40,
-  //   backgroundColor : '#2A48FA',
-  // },
-  // styleView : {
-  // 	backgroundColor : 'skyblue',
-  // 	height : 600,
-  // 	justifyContent : 'space-around',
-  // 	alignItems : 'flex-end'
-  // }
   main : {
   	flex : 1,
-  	backgroundColor : 'cornflowerblue',
-  	paddingTop : 40
+  	justifyContent  : 'center',
+  	alignItems : 'center'
   },
-	// button : {
-	// 	backgroundColor : '#48BBEC',
-	// 	padding : 10,
-	// 	borderColor : '#1D8EB8',
-	// 	borderWidth : 1,
-	// 	borderRadius : 8,
-	// 	shadowColor : '#000',
-	// 	shadowOffset : { width:0, height: 2},
-	// 	shadowOpacity : 0.4
-	// },
-	// textButton : {
-	// 	color : '#FFF',
-	// 	fontSize : 16, 
-	// 	fontWeight : 'bold',
-	// 	alignSelf : 'center'
-	// }
-//   top : {
-//   	flex : 2, // 2:11
-//   	backgroundColor : 'brown'
-//   },
-//   content : {
-//   	flex : 8, // 8:11
-//   	backgroundColor : 'yellowgreen'
-//   },
-//   footer : {
-//   	flex : 1, // 1:11
-//   	backgroundColor : 'orangered'
-//   }
-	imageStyle : {
-		justifyContent : 'flex-end',
-		padding : 5
+	buttonStyle : {
+		backgroundColor : '#538530',
+		paddingVertical : 10,
+		paddingHorizontal : 40, 
+		marginTop : 20
+	},
+	textButtonStyle : {
+		color : 'white',
+		fontSize : 16, 
+		fontWeight : 'bold'
 	}
 }; 
 
@@ -72,14 +28,15 @@ const Styles = {
 
 //Components
 const App = () => {
-	const { main, imageStyle } = Styles;
+	const { main, imageStyle, buttonStyle, textButtonStyle } = Styles;
   return (
   	<View style={ main }>
     	<Image 
-    		source={ require('./imgs/uvas.png') }
-    		style= { imageStyle } >
-    		<Text> Legenda para imagem </Text>
-    	</Image>
+    		source={ require('./imgs/logo.png') }
+    		style= { imageStyle } / >
+    		<TouchableOpacity style={ buttonStyle }> 
+    			<Text style={ textButtonStyle }> Frases do dia </Text>
+    		</TouchableOpacity>
     </View>
   );
 };
